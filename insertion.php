@@ -16,12 +16,12 @@ if ($_SERVER["REQUEST_METHOD"] === "POST"){
         $mail->isSMTP();
         $mail->Host       = 'smtp.gmail.com';
         $mail->SMTPAuth   = true;
-        $mail->Username   = 'emanamirniazi@gmail.com';     
-        $mail->Password   = 'fbvf pufi vnya gccx';       
+        $mail->Username   = 'gmailhere';     
+        $mail->Password   = 'app password here';       
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
         $mail->Port       = 587;
         $mail->setFrom($email, $name); 
-        $mail->addAddress('emanamirniazi@gmail.com', 'Eman');      
+        $mail->addAddress('gmail here', 'Eman');      
         $mail->addReplyTo($email, $name);                     
         $mail->isHTML(true);
         $mail->Subject = "New Contact Form Submission: $subject";
@@ -41,4 +41,5 @@ $mail->send();
 } else {
     echo "Invalid request!";
 }
+
 ?>
